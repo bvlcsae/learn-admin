@@ -1,11 +1,8 @@
 'use strict'
 
-
 var http = require('http');
 var https = require('https');
 var fs = require('fs');
-
-
 
 var serveIndex = require('serve-index');
 
@@ -21,7 +18,9 @@ var options = {
     cert : fs.readFileSync('./cert/6082957_www.clearlove520.com.pem')
 }
 
-var https_server = https.createServer(options, app);
-https_server.listen(443, '0.0.0.0');
+// var https_server = https.createServer(options, app);
+// https_server.listen(443, '0.0.0.0');
 
+var http_server = http.createServer(app);
+http_server.listen(3000, '0.0.0.0');
 
