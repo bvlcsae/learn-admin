@@ -10,8 +10,8 @@ var express = require('express');
 var app = express();
 
 //顺序不能换
-app.use(serveIndex('./public1'));
-app.use(express.static('./public1'));
+app.use(serveIndex('./public'));
+app.use(express.static('./public'));
 
 var options = {
     key  : fs.readFileSync('./cert/6082957_www.clearlove520.com.key'),
