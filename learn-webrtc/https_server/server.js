@@ -13,6 +13,7 @@ var app = express();
 app.use(serveIndex('./public1'));
 app.use(express.static('./public1'));
 
+
 var options = {
     key  : fs.readFileSync('./cert/6082957_www.clearlove520.com.key'),
     cert : fs.readFileSync('./cert/6082957_www.clearlove520.com.pem')
